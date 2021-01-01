@@ -1,0 +1,21 @@
+
+Vulnerable Containers to try out
+
+-Damn Vulnerable Web Application Docker container on the raspberry Pi
+
+https://github.com/opsxcq/docker-vulnerable-dvwa.git
+ A docker pull from docker hub will not work for this, you will need to git clone the repo, cd into the folder then type docker build . 
+ Type docker images, you may want to add a tag by typing docker tag container ID nameyouwant
+ Then type docker run --rm -it -p 80:80 nameyouwant and simply go to your hosts IP in your browser 
+   *If you havent added your user to the docker group, you will need to use sudo
+
+-Tiredful API is intentionally designed broken app. The aim of this web app is to teach developers, QA or security professionals about flaws present 
+in webservices (REST API) due to insecure coding practice.
+
+https://github.com/payatu/Tiredful-API
+ Git clone, cd in the folder then
+ docker build -t tiredful .
+ docker run -p 8000:8000 --name tiredful -it tiredful
+
+Recommended reads:
+- https://blog.ropnop.com/docker-for-pentesters/
